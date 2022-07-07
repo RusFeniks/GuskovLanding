@@ -1,12 +1,80 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <title>Лендинг Гуськов</title>
     <link rel="icon" type="image/x-icon" href="/assets/resources/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta content="true" name="HandheldFriendly" />
+    <meta content="width" name="MobileOptimized" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
 </head>
+
 <body>
-    <script src="assets/js/bootstrap.min.js"></script>
+    <div class="background-strips">
+        <div id="blue-strip-01"></div>
+        <div id="red-strip-01"></div>
+        <div id="yellow-strip-01"></div>
+        <div id="green-strip-01"></div>
+        <div id="blue-strip-02"></div>
+    </div>
+    {% include "navigation.twig" %}
+    <div class="spacer" id="top_anchor"></div>
+    <div class="slide">
+        {% include "slides/header.twig" %}
+    </div>
+    <div class="spacer" id="about_anchor"></div>
+    <div class="slide">
+        {% include "slides/about.twig" %}
+    </div>
+    <div class="spacer" id="works_anchor"></div>
+    <div class="slide">
+        {% include "slides/works.twig" %}
+    </div>
+    <div class="spacer" id="prices_anchor"></div>
+    <div class="slide">
+        {% include "slides/prices.twig" %}
+    </div>
+    <div class="spacer" id="contacts_anchor"></div>
+    <div class="slide mb-0">
+        {% include "slides/contacts.twig" %}
+    </div>
+
+    <script>
+        const animatedItemsRawList = document.querySelectorAll('*[data-animation-bind]');
+        const animatedItems = [];
+
+        animatedItemsRawList.forEach(item => {
+            const triggerObject = document.querySelector(item.getAttribute('data-animation-bind'));
+            const triggerY = triggerObject.offsetTop - window.innerHeight / 2;
+            item.style.animation = 'none';
+            animatedItems.push({
+                element: item,
+                triggerY: triggerY,
+                animated: false
+            });
+        });
+
+        const checkTrigger = () => {
+            const scrollY = window.scrollY;
+
+            animatedItems.forEach(item => {
+                if (!item.animated && scrollY >= item.triggerY) {
+                    item.element.style.animation = null;
+                    item.animated = true;
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkTrigger);
+        checkTrigger();
+    </script>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/fslightbox.js"></script>
 </body>
+
 </html>

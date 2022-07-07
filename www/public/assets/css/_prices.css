@@ -1,0 +1,165 @@
+.prices-header {
+  animation: sizing_to_100_horizontal 1.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+    slide_right 1.25s cubic-bezier(0.34, 1.46, 0.64, 1);
+  animation-delay: 0;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  position: relative;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 1200px) {
+  .prices-header {
+    animation: none;
+    visibility: visible;
+  }
+}
+
+.prices-container {
+  box-sizing: content-box;
+  height: 640px;
+  margin-top: -7rem;
+  max-height: 640px;
+  overflow: hidden;
+  overflow: hidden;
+  padding-top: 7rem;
+  position: relative;
+}
+
+@media screen and (max-width: 1200px) {
+  .prices-container {
+    height: max-content;
+    margin-top: 0;
+    max-height: max-content;
+    overflow: visible;
+    padding-top: 0;
+  }
+}
+
+.price--slised__frame {
+  margin-top: -360px;
+}
+
+@media screen and (max-width: 1200px) {
+  .price--slised__frame {
+    margin-top: 0;
+  }
+}
+
+.price {
+  animation: slide_up 1.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation-fill-mode: forwards;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  height: 500px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 22px 0;
+  position: relative;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 1200px) {
+  .price {
+    animation: none;
+    visibility: visible;
+  }
+}
+
+.price__header,
+.price__summ {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 36px;
+  line-height: 43.88px;
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.price__content {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.price__content ul {
+  margin: 0;
+  padding: 0;
+}
+
+.price__offer {
+  display: flex;
+  justify-content: center;
+}
+
+.price__offer a {
+  background: #f5de7d;
+  color: #302f2f;
+  display: inline-block;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 36px;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.price__offer a:hover {
+  transform: scale(1.1);
+}
+
+#blue-price-1 .price {
+  animation-delay: 0.2s;
+}
+
+#blue-price-2 .price {
+  animation-delay: 0.45s;
+}
+
+#blue-price-3 .price {
+  animation-delay: 0.7s;
+}
+
+#blue-price-4 .price {
+  animation-delay: 0.95s;
+}
+
+#green-price-1 .price {
+  animation-delay: 2.2s;
+}
+
+#green-price-2 .price {
+  animation-delay: 1.95s;
+}
+
+#green-price-3 .price {
+  animation-delay: 1.7s;
+}
+
+#green-price-4 .price {
+  animation-delay: 1.45s;
+}
+
+.price--slised__frame {
+  transition: margin-top 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@media screen and (min-width: 1200px) {
+  #blue-price-1:hover ~ #green-price-1 {
+    margin-top: 0px;
+  }
+
+  #blue-price-2:hover ~ #green-price-2 {
+    margin-top: 0px;
+  }
+
+  #blue-price-3:hover ~ #green-price-3 {
+    margin-top: 0px;
+  }
+
+  #blue-price-4:hover ~ #green-price-4 {
+    margin-top: 0px;
+  }
+}

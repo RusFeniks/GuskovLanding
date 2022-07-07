@@ -1,0 +1,140 @@
+.avatar {
+  animation: sizing_to_100_vertical 0.95s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation-fill-mode: forwards;
+  background-image: url("../resources/avatar.jpg"),
+    linear-gradient(
+      180deg,
+      rgba(75, 245, 136, 1) 0%,
+      rgba(255, 255, 255, 1) 85%,
+      rgba(255, 255, 255, 0) 85%
+    );
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 390px;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 992px) {
+  .avatar {
+    animation: none;
+    visibility: visible;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info__header {
+  animation: sizing_to_100_vertical 0.75s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation-delay: 0.45s;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 992px) {
+  .info__header {
+    animation: none;
+    visibility: visible;
+  }
+}
+
+.info__content-container {
+  flex-grow: 1;
+}
+
+.info__content {
+  animation: sizing_to_100_vertical 1.05s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation-delay: 0.9s;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  padding: 1rem;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 992px) {
+  .info__content {
+    animation: none;
+    visibility: visible;
+  }
+}
+
+.skills__header {
+  animation: sizing_to_100_horizontal 0.75s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation-delay: 1.55s;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 992px) {
+  .skills__header {
+    animation: none;
+    visibility: visible;
+  }
+}
+
+.skills__container {
+  animation: sizing_to_100_horizontal 1.05s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 992px) {
+  .skills__container {
+    animation: none;
+    visibility: visible;
+  }
+}
+
+.skill__strip {
+  animation: sizing_to_100_horizontal 1.05s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation-fill-mode: forwards;
+  height: 24px;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 992px) {
+  .skill__strip {
+    animation: none;
+    visibility: visible;
+  }
+}
+
+#skill-strip-1 {
+  animation-delay: 2.5s;
+}
+
+#skill-strip-2 {
+  animation-delay: 2.75s;
+}
+
+#skill-strip-3 {
+  animation-delay: 3s;
+}
+
+#skill-strip-4 {
+  animation-delay: 3.25s;
+}
+
+#skill-strip-5 {
+  animation-delay: 3.5s;
+}

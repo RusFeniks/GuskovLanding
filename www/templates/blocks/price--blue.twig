@@ -1,0 +1,17 @@
+<div class="col-12 col-md-6 col-xl-3 mb-2 mb-xl-0 price-container" id="{{ id }}">
+    <div class="price bg-blue" data-animation-bind="#prices_anchor">
+        <div class="price__header">
+            {{ header|raw }}
+        </div>
+        <div class="price__content">
+            {{ content|raw }}
+        </div>
+        <div class="price__summ">
+            от <br>
+            {{ price|raw }} руб.
+        </div>
+        <div class="price__offer">
+            <a href="#contacts_anchor">Написать</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="row gx-2 mb-2">
+        <div class="col-12 col-md-6 d-none d-md-block"></div>
+        <div class="col-12 col-md-6">
+            <div class="bg-black header prices-header" data-animation-bind="#prices_anchor">
+                <h2>Услуги</h2>
+            </div>
+        </div>
+    </div>
+    <div class="row gx-2 prices-container">
+        {% include 'blocks/price--blue.twig' with {
+            'id': 'blue-price-1',
+            'header': 'Экспрес логотип 2',
+            'content': '<li>123</li>',
+            'price': '1 000'
+        } %}
+        {% include 'blocks/price--blue.twig' with {
+            'id': 'blue-price-2',
+            'header': 'Экспрес логотип 2',
+            'content': '<li>123</li>',
+            'price': '1 000'
+        } %}
+        {% include 'blocks/price--blue.twig' with {
+            'id': 'blue-price-3',
+            'header': 'Экспрес логотип 2',
+            'content': '<li>123</li>',
+            'price': '1 000'
+        } %}
+        {% include 'blocks/price--blue.twig' with {
+            'id': 'blue-price-4',
+            'header': 'Экспрес логотип 2',
+            'content': '<li>123</li>',
+            'price': '1 000'
+        } %}
+        {% include 'blocks/price--green.twig' with {
+            'id': 'green-price-1',
+            'header': 'Экспрес логотип 2',
+            'content': '
+                <ul>
+                    <li>логотип по эскизу</li>
+                    <li>до 3 правок логотипа</li>
+                    <li>файлы для веб и печати</li>
+                    <li>2 варианта логотипа</li>
+                    <li>до 5 дней на отрисовку</li>
+                </ul>
+            ',
+            'price': '1 000'
+        } %}
+        {% include 'blocks/price--green.twig' with {
+            'id': 'green-price-2',
+            'header': 'Экспрес логотип 2',
+            'content': '<li>123</li>',
+            'price': '1 000'
+        } %}
+        {% include 'blocks/price--green.twig' with {
+            'id': 'green-price-3',
+            'header': 'Экспрес логотип 2',
+            'content': '<li>123</li>',
+            'price': '1 000'
+        } %}
+        {% include 'blocks/price--green.twig' with {
+            'id': 'green-price-4',
+            'header': 'Экспрес логотип 2',
+            'content': '<li>123</li>',
+            'price': '1 000'
+        } %}
+    </div>
+</div>

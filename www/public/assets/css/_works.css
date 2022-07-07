@@ -1,0 +1,122 @@
+.works {
+  display: grid;
+  grid-gap: 8px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 1200px) {
+  .works {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .works {
+    grid-template-columns: 1fr;
+  }
+}
+
+.works-header {
+  animation: sizing_to_100_horizontal 1.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+    slide_left 1.25s cubic-bezier(0.34, 1.46, 0.64, 1);
+  animation-delay: 0;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  position: relative;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 992px) {
+  .works-header {
+    animation: none;
+    visibility: visible;
+  }
+}
+
+.work {
+  height: 200px;
+  padding: 4px;
+  position: relative;
+}
+
+.work img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+#work-1,
+#work-2,
+#work-3,
+#work-7,
+#work-8,
+#work-9 {
+  animation: sizing_to_100_horizontal 1.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+    slide_right 1.25s cubic-bezier(0.34, 1.46, 0.64, 1);
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  position: relative;
+  visibility: hidden;
+}
+
+#work-4,
+#work-5,
+#work-6 {
+  animation: sizing_to_100_horizontal 1.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+    slide_left 1.25s cubic-bezier(0.34, 1.46, 0.64, 1);
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  position: relative;
+  visibility: hidden;
+}
+
+#work-1 {
+  animation-delay: 0.1s;
+}
+
+#work-2 {
+  animation-delay: 0.4s;
+}
+
+#work-3 {
+  animation-delay: 0.7s;
+}
+
+#work-4 {
+  animation-delay: 1s;
+}
+
+#work-5 {
+  animation-delay: 0.7s;
+}
+
+#work-6 {
+  animation-delay: 0.4s;
+}
+
+#work-7 {
+  animation-delay: 0.7s;
+}
+
+#work-8 {
+  animation-delay: 1s;
+}
+
+#work-9 {
+  animation-delay: 1.3s;
+}
+
+@media screen and (max-width: 992px) {
+  #work-1,
+  #work-2,
+  #work-3,
+  #work-4,
+  #work-5,
+  #work-6,
+  #work-7,
+  #work-8,
+  #work-9 {
+    animation: none;
+    visibility: visible;
+  }
+}

@@ -1,0 +1,71 @@
+<div class="desktop-menu">
+    <div class="desktop-menu__content bg-yellow">
+        <ul>
+            <li><a href="#top_anchor">Главаная</a></li>
+            <li><a href="#about_anchor">Обо мне</a></li>
+            <li><a href="#works_anchor">Работы</a></li>
+            <li><a href="#prices_anchor">Услуги</a></li>
+            <li><a href="#contacts_anchor">Контакты</a></li>
+        </ul>
+    </div>
+    <div class="desktop-menu__button bg-black">Меню</div>
+</div>
+
+<div class="mobile-menu__button"></div>
+<div class="mobile-menu__content bg-yellow">
+    <ul>
+        <li><a href="#top_anchor">Главаная</a></li>
+        <li><a href="#about_anchor">Обо мне</a></li>
+        <li><a href="#works_anchor">Работы</a></li>
+        <li><a href="#prices_anchor">Услуги</a></li>
+        <li><a href="#contacts_anchor">Контакты</a></li>
+    </ul>
+</div>
+
+<script>
+    let menuStatus = false;
+    let desktopMenu = document.querySelector('.desktop-menu');
+    let desktopMenuContent = document.querySelector('.desktop-menu__content');
+    let desktopMenuButton = document.querySelector('.desktop-menu__button');
+
+    let mobileMenuContent = document.querySelector('.mobile-menu__content');
+    let mobileMenuButton = document.querySelector('.mobile-menu__button');
+
+    let mobileLinks = document.querySelectorAll('.mobile-menu__content a');
+
+    const updateMenuStatus = () => {
+        if (menuStatus) {
+            desktopMenuButton.textContent = 'Закрыть';
+            desktopMenu.style.left = `0px`;
+            mobileMenuContent.style.top = `0px`;
+            mobileMenuButton.classList.add('mobile-menu__button--opened');
+        } else {
+            desktopMenuButton.textContent = 'Меню';
+            desktopMenu.style.left = `-${desktopMenuContent.clientWidth}px`;
+            mobileMenuContent.style.top = `-${mobileMenuContent.clientHeight}px`;
+            mobileMenuButton.classList.remove('mobile-menu__button--opened');
+        }
+    }
+
+    desktopMenuButton.addEventListener('click', () => {
+        menuStatus = !menuStatus;
+        updateMenuStatus();
+    });
+    mobileMenuButton.addEventListener('click', () => {
+        menuStatus = !menuStatus;
+        updateMenuStatus();
+    });
+
+    mobileLinks.forEach(element => {
+        element.addEventListener('click', () => {
+            menuStatus = !menuStatus;
+            updateMenuStatus();
+        });
+    });
+
+    window.addEventListener('resize', () => {
+        updateMenuStatus();
+    });
+
+    updateMenuStatus();
+</script>

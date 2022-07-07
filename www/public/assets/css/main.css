@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "./__animations.css";
+@import "./_info.css";
+@import "./_works.css";
+@import "./_prices.css";
+@import "./_contacts.css";
+@import "./_heder.css";
+@import "./_navigation.css";
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
+h2 {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 36px;
+  margin: 0;
+  padding: 0;
+}
+
+.slide {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+  .slide {
+    margin-bottom: 4rem;
+    min-height: 100vh;
+  }
+}
+
+.bg-black {
+  background: #302f2f;
+  color: #f3f1f1;
+}
+
+.bg-yellow {
+  background: #f5de7d;
+  color: #302f2f;
+}
+
+.bg-green {
+  background: #4cf587;
+}
+
+.bg-blue {
+  background: #585cf5;
+  color: #f3f1f1;
+}
+
+.bg-red {
+  background: #f56a64;
+}
+
+.white-power {
+  color: #f3f1f1;
+}
+
+.header {
+  padding: 16px;
+  padding-top: 4rem;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.background-strips {
+  height: 100%;
+  left: 0px;
+  overflow-x: hidden;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: -1;
+}
+
+#red-strip-01 {
+  background: #f56a64;
+  height: 150px;
+  left: -190px;
+  position: absolute;
+  top: 155vh;
+  transform: rotate(35deg);
+  width: 60vw;
+  z-index: -1;
+}
+
+#blue-strip-01 {
+  background: #585cf5;
+  height: 120px;
+  left: -180px;
+  position: absolute;
+  top: 150vh;
+  transform: rotate(-40deg);
+  width: 60vw;
+  z-index: -1;
+}
+
+#yellow-strip-01 {
+  background: #f5de7d;
+  height: 160px;
+  position: absolute;
+  right: -250px;
+  top: 350vh;
+  transform: rotate(-40deg);
+  width: 70vw;
+  z-index: -1;
+}
+
+#blue-strip-02 {
+  background: #585cf5;
+  height: 160px;
+  left: -220px;
+  position: absolute;
+  top: 470vh;
+  transform: rotate(40deg);
+  width: 70vw;
+  z-index: -1;
+}
+
+#green-strip-01 {
+  background: #4cf587;
+  height: 90px;
+  position: absolute;
+  right: 0;
+  right: -250px;
+  top: 485vh;
+  transform: rotate(-25deg);
+  width: 80vw;
+  z-index: -1;
+}
+
+@media screen and (max-width: 992px) {
+  .background-strips,
+  #green-strip-01,
+  #blue-strip-02,
+  #yellow-strip-01,
+  #blue-strip-01,
+  #red-strip-01 {
+    display: none;
+  }
+}
+
+.spacer {
+  position: absolute;
+}

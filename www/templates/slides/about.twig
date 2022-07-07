@@ -1,0 +1,91 @@
+<div class="container">
+    <div class="row gx-2 lg-4 mb-2">
+        <div class="col-1 d-none d-lg-block"></div>
+        <div class="col-12 col-lg-4 mb-2 mb-lg-0 avatar__container">
+            <div class="avatar" data-animation-bind="#about_anchor"></div>
+        </div>
+        <div class="col-12 col-lg-6 mb-2 mb-lg-0 info">
+            <div class="info__header-container mb-2">
+                <div class="header bg-black info__header" data-animation-bind="#about_anchor">
+                    <h2>Обо мне</h2>
+                </div>
+            </div>
+            <div class="info__content-container">
+                <div class="bg-yellow info__content" data-animation-bind="#about_anchor">
+                    Меня зовут Александр Гуськов, мне 26 лет.<br>
+                    Я начинающий дизайнер, готов работать за еду и опыт.<br>
+                    Люблю всякое красивое, пепси-колу и компьютерные игры.<br>
+                    Образование техник компьютерных сетей, при необходимости могу починить утюг. Вообще я могу все.<br>
+                    <br>
+                    Обучаюсь самостоятельно, по видео, книгам и в процессе работы.<br>
+                    <br>
+                    Дизайн этого сайта, кастати сделал я. Ниже вы увидите мои работы.
+                </div>
+            </div>
+        </div>
+        <div class="col-1 d-none d-lg-block"></div>
+    </div>
+    <div class="row gx-2">
+        <div class="col-1 d-none d-lg-block"></div>
+        <div class="col-12 col-lg-4 skills">
+            <div class="bg-yellow p-3 mb-2 skills__header" data-animation-bind="#about_anchor">
+                <h2>Навыки</h2>
+            </div>
+            <div class="bg-black p-3 skills__container" data-animation-bind="#about_anchor">
+                <div class="container-fluid">
+                    <div class="row mb-3">
+                        <div class="col-12 mb-1">Lightroom</div>
+                        <div class="col-10">
+                            <div class="bg-green skill__strip" id="skill-strip-1" data-animation-bind="#about_anchor">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-12 mb-1">illustrator</div>
+                        <div class="col-7">
+                            <div class="bg-green skill__strip" id="skill-strip-2" data-animation-bind="#about_anchor">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-12 mb-1">Figma</div>
+                        <div class="col-8">
+                            <div class="bg-green skill__strip" id="skill-strip-3" data-animation-bind="#about_anchor">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-12 mb-1">Photoshop</div>
+                        <div class="col-11">
+                            <div class="bg-green skill__strip" id="skill-strip-4" data-animation-bind="#about_anchor">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-12 mb-1">Premiere&nbsp;Pro</div>
+                        <div class="col-6">
+                            <div class="bg-green skill__strip" id="skill-strip-5" data-animation-bind="#about_anchor">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-7 d-none d-lg-block">
+            <div class="h-100">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const avatar = document.querySelector('.avatar');
+    const avatar__container = document.querySelector('.avatar__container');
+    const resizeAvatar = () => {
+        avatar.style.height = `${avatar.clientWidth}px`;
+        avatar__container.style.height = `${avatar.clientWidth}px`;
+    }
+    window.addEventListener('resize', resizeAvatar);
+    resizeAvatar();
+</script>

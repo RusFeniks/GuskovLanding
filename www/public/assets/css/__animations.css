@@ -1,0 +1,118 @@
+@keyframes sizing_to_100_horizontal {
+  0% {
+    padding-left: 0;
+    padding-right: 0;
+    visibility: hidden;
+    width: 0%;
+  }
+  5% {
+    padding-left: 0;
+    padding-right: 0;
+    visibility: visible;
+    width: 0%;
+  }
+  100% {
+    visibility: visible;
+    width: 100%;
+  }
+}
+
+@keyframes sizing_to_100_vertical {
+  0% {
+    height: 0%;
+    padding-bottom: 0;
+    padding-top: 0;
+    visibility: hidden;
+  }
+  5% {
+    height: 0%;
+    padding-bottom: 0;
+    padding-top: 0;
+    visibility: visible;
+  }
+  100% {
+    height: 100%;
+    visibility: visible;
+  }
+}
+
+@keyframes slide_left {
+  0% {
+    left: 100vw;
+  }
+  5% {
+    left: 100vw;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes slide_right {
+  0% {
+    left: -100vw;
+  }
+  5% {
+    left: -100vw;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes slide_up {
+  0% {
+    top: 100vh;
+    visibility: hidden;
+  }
+  5% {
+    top: 100vh;
+    visibility: visible;
+  }
+  100% {
+    top: 0;
+    visibility: visible;
+  }
+}
+
+@keyframes slide_right_unknown_position {
+  0% {
+    left: -150vw;
+    visibility: hidden;
+  }
+  5% {
+    left: -150vw;
+    visibility: visible;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes slide_left_unknown_position {
+  0% {
+    right: -150vw;
+    visibility: hidden;
+  }
+  5% {
+    right: -150vw;
+    visibility: visible;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes slide_down_unknown_position {
+  0% {
+    top: -150vh;
+    visibility: hidden;
+  }
+  5% {
+    top: -150vh;
+    visibility: visible;
+  }
+  100% {
+    visibility: visible;
+  }
+}
